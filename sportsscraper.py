@@ -12,8 +12,6 @@ def get_baseball_football(url):
 
     athletes = []
     
-    
-    name_list = soup.find_all("td", class_="sidearm-table-player-name")
     sport = soup.find_all("h2")[2].text
     if "2024 Spring Football Roster" in sport:
         sport = "2024 Football"
@@ -21,12 +19,13 @@ def get_baseball_football(url):
         sportnames = soup.find_all("h2")
         sport = sportnames[2].text.strip("Roster")
 
+    name_list = soup.find_all("td", class_="sidearm-table-player-name")
     hometown_list = soup.find_all("td", class_="hometownhighschool")
     for detail in range(len(name_list)):
         names = name_list[detail]
         hometown_detail = hometown_list[detail]
-
         name = names.find("a").text
+
         if hometown_detail:
             textstrip = hometown_detail.text
             split = textstrip.split("/")
