@@ -2,7 +2,7 @@
 
 For this assignment, I wanted to scrape the rosters of all the official University of Florida’s sports teams __(17 in total)__. From the rosters, I wanted to get the name of every athlete, as well as their hometown and high school.   
 
-I wanted to get this because it offers insight into what states and schools are getting scouted the most for UF. 
+I wanted to get this because it offers insight into what cities and schools are getting scouted the most for UF. 
 
 ## The Steps I Took  
 
