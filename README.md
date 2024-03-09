@@ -23,7 +23,7 @@ After getting all these functions to output the information properly, I created 
 
 There were a few unexpected problems I ran into.   
 
-1. The first problem was figuring out how to properly get the information into the CSV file. While the scraping functions worked, I originally was trying to put all the information into one list, instead of one list for each player into a list containing all the lists. This was an easy fix once I realized my mistake, as I just needed to create another list and append the information lists to that one.  
+1. The first problem was figuring out how to properly get the information into the CSV file. While the scraping functions worked, I originally was trying to put all the information into one list, instead of making one list for each player and putting all of those into a list containing all the lists. This was an easy fix once I realized my mistake, as I just needed to create another list and append the information lists to that one.  
 
 2. The second problem I ran into was with the for loop in the get_baseball_football_rows function. For the other functions, I was able to find a relatively easy overarching HTML element that contained the other elements I needed. This way I could find all the information I needed in one for loop, which was necessary for getting all the information into individual lists. Yet, for the baseball and football roster pages, I could not find one overarching element that worked well. This took me the longest to figure out, as I had to go back and look at how I could format for loops differently __(in range vs. in a specific list)__ to make the loop run to produce all the lists I needed. I was able to implement that loop into my code and the function ran successfully.  
 
