@@ -16,7 +16,7 @@ I wanted to get this because it offers insight into what states and schools are 
 
 For this page, I utilized **four main functions.**  
 
-The first step I had to do was figure out which pages were formatted differently. Then, I made three different functions that take the URLs and scrape them for the sport on the page, the players’ names, the players’ hometowns, and the players' high schools. These three functions are __get_baseball_football_rows()__, __get_other_sports_rows()__ and __get_running_rows()__. These three functions take the partial URLs from their specific list, scrape the information, put the information into individual lists for each player, and then put those individual lists into one overarching list. 
+The first step I had to do was figure out which pages were formatted differently. Then, I made three different functions that take the URLs and scrape them for the sport on the page, the players’ names, the players’ hometowns, and the players' high schools. These three functions are __get_baseball_football()__, __get_other_sports()__ and __get_running()__. These three functions take the partial URLs from their specific list, scrape the information, put the information into individual lists for each player, and then put those individual lists into one overarching list. 
 
 After getting all these functions to output the information properly, I created the __write_csv()__ function. This function takes three arguments and calls the three functions to pass those arguments __(the three lists)__ to the functions. It also opens a CSV file and writes the information coming from those three functions into the file. 
 

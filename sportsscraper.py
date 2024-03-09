@@ -6,7 +6,7 @@ import time
 link_list = ["/football/roster",
              "/baseball/roster"]
 
-def get_baseball_football_rows(url):
+def get_baseball_football(url):
     page = requests.get("https://floridagators.com/sports" + url)
     soup = BeautifulSoup(page.text, 'html.parser')
 
@@ -56,7 +56,7 @@ link2_list = ["/mens-basketball/roster",
               "/womens-tennis/roster",
               "/womens-volleyball/roster"]
 
-def get_other_sports_rows (url_again):
+def get_other_sports(url_again):
     page = requests.get("https://floridagators.com/sports" + url_again)
     soup = BeautifulSoup(page.text, 'html.parser')
 
@@ -88,7 +88,7 @@ def get_other_sports_rows (url_again):
 link3_list = ["/track-and-field/roster",
               "/cross-country/roster"]
 
-def get_running_rows(url_again_again):
+def get_running(url_again_again):
     page = requests.get("https://floridagators.com/sports" + url_again_again)
     soup = BeautifulSoup(page.text, 'html.parser')
 
@@ -123,14 +123,14 @@ def write_csv(link_list, link2_list, link3_list):
     c = csv.writer(csvfile)
     c.writerow(['sport', 'name', 'hometown', 'highschool'])
     for url in link_list:
-        player_details = get_baseball_football_rows(url)
+        player_details = get_baseball_football(url)
         c.writerows(player_details)
     for url2 in link2_list:
-        player_details2 = get_other_sports_rows(url2)
+        player_details2 = get_other_sports(url2)
         c.writerows(player_details2)
         time.sleep(1)
     for url3 in link3_list:
-        player_details3 = get_running_rows(url3)
+        player_details3 = get_running(url3)
         c.writerows(player_details3)
     csvfile.close()
     return None
