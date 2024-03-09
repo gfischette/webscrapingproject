@@ -6,7 +6,7 @@ I wanted to get this because it offers insight into what cities and schools are 
 
 ## The Steps I Took  
 
-For this page, I utilized **four main functions.**   
+For this code, I utilized **four main functions.**   
 
 
 The first step I had to do was figure out which pages were formatted differently. Then, I made three different functions that take the URLs and scrape them for the sport on the page, the players’ names, the players’ hometowns, and the players' high schools. These three functions are __get_baseball_football()__, __get_other_sports()__ and __get_running()__.  
