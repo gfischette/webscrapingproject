@@ -13,7 +13,7 @@ The first step I had to do was figure out which pages were formatted differently
 
 The __get_baseball_football()__ function gets the baseball and football team's information, the __get_running()__ function gets the cross country and track and field team's information, and the __get_other_sports()__ function gets all the other sports. 
 
-These three functions take the partial URLs from their specific list, scrape the information, put the information into individual lists for each player, and then put those individual lists into one overarching list.  
+These three functions take the partial URLs from their specific list, scrape the information, put the information into individual lists for each player, and then put those individual lists into one list.  
 
 After getting all these functions to output the information properly, I created the __write_csv()__ function. This function takes three arguments and calls the three functions to pass those arguments __(the three lists)__ to the functions. It also opens a CSV file and writes the information coming from those three functions into the file.  
 
